@@ -1,0 +1,129 @@
+[
+  {
+    "id": "D1",
+    "date": "2026-07-07",
+    "titre": "Lancement : chargée de projet, budget, cible, portée phase 1",
+    "enonce": "Élodie Caron est chargée de projet, le budget initial maximal est de 180 000 $ CAD, la cible de mise en production est le 15 octobre 2026, et la portée de la phase 1 couvre le SSO, les demandes, les pièces jointes, le workflow, le tableau de suivi et les rapports standards.",
+    "decideur": "Rencontre de démarrage (participants de M01)",
+    "pourquoi": "Lancement officiel et confirmation de la portée de la phase 1.",
+    "statut": "Partiellement remplacée : date (D5), responsable (D7), budget (D4)",
+    "refs": [
+      { "s": "M01", "l": "Décisions", "q": "Cible de mise en production : 15 octobre 2026." },
+      { "s": "M01", "l": "Décisions", "q": "Budget initial maximal : 180 000 $ CAD." },
+      { "s": "CHARTE", "l": "dernier §", "q": "n'est pas mise à jour automatiquement après chaque décision de comité" }
+    ]
+  },
+  {
+    "id": "D2",
+    "date": "2026-07-23",
+    "titre": "Données de production dans Canada Central (ADR-007)",
+    "enonce": "L'environnement de production de NOVA est déployé dans Canada Central ; l'architecture v1 (East US) est remplacée sur ce point.",
+    "decideur": "Atelier architecture (Élodie, Marc, Sophie, Julien), formalisé par ADR-007 « Acceptée »",
+    "propose_par": "Exigence de Sophie Lambert (sécurité), le 22 juillet (E02)",
+    "pourquoi": "Pour la sécurité, les données de production NOVA doivent demeurer au Canada ; Marc juge le changement techniquement simple s'il est fait tôt.",
+    "statut": "En vigueur — mise en œuvre déclarée le 26 août et vérifiée le 27 août",
+    "refs": [
+      { "s": "M02", "l": "09:10 (Élodie)", "q": "Donc on tranche Canada Central?" },
+      { "s": "ADR-007", "l": "en-tête", "q": "**Statut :** Acceptée" },
+      { "s": "E02", "l": "corps, § 3", "q": "je veux que les données de production demeurent au Canada" }
+    ]
+  },
+  {
+    "id": "D3",
+    "date": "2026-07-23",
+    "titre": "SSO uniquement en production",
+    "enonce": "Pas de comptes locaux : authentification SSO seulement en production.",
+    "decideur": "Atelier architecture (M02)",
+    "pourquoi": "Exigence sécurité, déjà prévue par Boréal.",
+    "statut": "En vigueur",
+    "refs": [
+      { "s": "M02", "l": "09:15 (Sophie)", "q": "SSO seulement en production." },
+      { "s": "M02", "l": "09:43 (Élodie)", "q": "Canada Central, SSO uniquement, audit admin à valider." }
+    ]
+  },
+  {
+    "id": "D4",
+    "date": "2026-08-14",
+    "titre": "CR-01 approuvé : rapports avancés (+24 000 $)",
+    "enonce": "La demande de changement CR-01 (rapports avancés et export de synthèse) est approuvée pour 24 000 $, sans changement de la date cible.",
+    "decideur": "Comité de projet",
+    "pourquoi": "Ajout fonctionnel jugé nécessaire (justification détaillée non documentée).",
+    "statut": "En vigueur — porte l'autorisé à 204 000 $ (notre calcul)",
+    "refs": [
+      { "s": "CR-01", "l": "p. 1, Impact financier", "q": "Date de décision 14 août 2026" },
+      { "s": "CR-01", "l": "p. 1, Impact financier", "q": "Autorité Comité de projet" }
+    ]
+  },
+  {
+    "id": "D5",
+    "date": "2026-09-10",
+    "titre": "Mise en production déplacée au 22 octobre 2026",
+    "enonce": "La date cible de mise en production passe du 15 au 22 octobre 2026.",
+    "decideur": "Comité de direction (décision formulée par Élodie Caron, sans objection)",
+    "propose_par": "Boréal Numérique — Julien Moreau, courriel du 8 sept (E05)",
+    "pourquoi": "Le connecteur interne (INT-101) est sur le chemin critique. La sécurité et l'accessibilité refusent de compresser leurs tests. Aucune pénalité contractuelle (le contrat court jusqu'à fin octobre).",
+    "statut": "En vigueur — rendue conditionnelle par D9",
+    "refs": [
+      { "s": "M04", "l": "15:25 (Élodie)", "q": "Le 22 devient la date officielle." },
+      { "s": "M04", "l": "15:08 (Sophie)", "q": "je ne veux pas compresser les tests sécurité pour sauver le 15." },
+      { "s": "M04", "l": "15:18 (Élodie)", "q": "Pas de pénalité identifiée." },
+      { "s": "E05", "l": "corps, § 3", "q": "il s'agit d'une proposition de notre part" }
+    ]
+  },
+  {
+    "id": "D6",
+    "date": "2026-09-10",
+    "titre": "Mobile : aucune décision de dépense",
+    "enonce": "L'estimation mobile de Boréal (~18 000 $) n'est pas approuvée ; elle sera traitée séparément des corrections d'accessibilité obligatoires.",
+    "decideur": "Comité de direction (Élodie Caron)",
+    "propose_par": "Boréal (Julien Moreau), estimation d'environ 18 000 $",
+    "pourquoi": "Non requis par la portée actuelle de la phase 1.",
+    "statut": "En vigueur — précisée par D8",
+    "refs": [
+      { "s": "M04", "l": "15:37 (Élodie)", "q": "On va traiter ça séparément, aucune approbation aujourd'hui." },
+      { "s": "M04", "l": "15:40 (Élodie)", "q": "Mobile : aucune décision de dépense." }
+    ]
+  },
+  {
+    "id": "D7",
+    "date": "2026-09-16",
+    "titre": "Nicolas Perron devient chargé de projet",
+    "enonce": "Nicolas Perron prend officiellement la charge du projet NOVA ; les décisions et suivis lui sont adressés.",
+    "decideur": "Non documenté (« Comme convenu ») — annoncé par Élodie Caron",
+    "pourquoi": "Transition annoncée sans motif écrit.",
+    "statut": "En vigueur",
+    "refs": [
+      { "s": "E06", "l": "corps, § 2", "q": "Comme convenu, Nicolas Perron prend officiellement la charge du projet NOVA" },
+      { "s": "TEAMS-16", "l": "08:47 (Nicolas)", "q": "Je reprends aussi le comité du vendredi." }
+    ]
+  },
+  {
+    "id": "D8",
+    "date": "2026-09-24",
+    "titre": "CR-04 (mobile avancé) reporté en phase 2",
+    "enonce": "Les optimisations mobiles avancées de CR-04 sont hors de la phase 1 et reportées en phase 2. Aucune dépense ni facturation sans nouvelle approbation. La phase 1 doit rester utilisable sur mobile.",
+    "decideur": "Non nommé dans le document de décision ; communiqué par Nicolas Perron (E10)",
+    "propose_par": "CR-04 demandé par Boréal le 4 sept (brouillon)",
+    "pourquoi": "Hors de la portée approuvée de la phase 1 ; aucune approbation de dépense.",
+    "statut": "En vigueur",
+    "refs": [
+      { "s": "DECISION-PORTEE", "l": "en-tête Décision", "q": "Les optimisations mobiles avancées associées à la demande CR-04 sont reportées à la phase 2." },
+      { "s": "E10", "l": "corps, § 2", "q": "Nous les reportons à la phase 2." },
+      { "s": "M06", "l": "10:25 (Nicolas)", "q": "Facturer du CR-04, non." }
+    ]
+  },
+  {
+    "id": "D9",
+    "date": "2026-09-26",
+    "titre": "Go-live du 22 oct conditionnel à trois conditions",
+    "enonce": "Le 22 octobre reste la cible, conditionnellement à : (G1) la validation sécurité de SEC-210, (G2) la fermeture d'ACC-303 et (G3) l'approbation du runbook incluant le rollback.",
+    "decideur": "Comité de direction (Nicolas Perron ; Sophie, Mélissa et Olivier d'accord)",
+    "pourquoi": "Le correctif SEC-210 n'est pas accepté, ACC-303 est bloquant et le runbook n'a pas de rollback.",
+    "statut": "En vigueur",
+    "refs": [
+      { "s": "M06", "l": "10:09 (Nicolas)", "q": "Donc trois conditions concrètes" },
+      { "s": "M06", "l": "10:30 (Nicolas)", "q": "Je publie le compte rendu : cible 22 octobre, trois conditions de go-live." },
+      { "s": "E09", "l": "corps, § 2", "q": "la cible approuvée demeure le 22 octobre." }
+    ]
+  }
+]

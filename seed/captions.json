@@ -1,0 +1,117 @@
+{
+  "_meta": {
+    "methode": "Transcription produite par lecture visuelle (Claude, vision) puis relue manuellement contre chaque PNG. Les boîtes sont en pixels sur l'image d'origine 1180×720.",
+    "relu_par_humain": true
+  },
+  "OPS-601.png": {
+    "entete": "NOVA · Version du 25 septembre",
+    "lignes": [
+      { "t": "Runbook de mise en production" },
+      { "t": "1. Vérifier la santé des services — OK", "box": [80, 222, 1010, 48] },
+      { "t": "2. Activer le mode maintenance — OK", "box": [80, 290, 1010, 48] },
+      { "t": "3. Déployer la version approuvée — OK", "box": [80, 358, 1010, 48] },
+      { "t": "4. Procédure de retour arrière — TODO", "box": [80, 426, 1010, 48] },
+      { "t": "5. Validation fonctionnelle post-déploiement — À compléter", "box": [80, 494, 1010, 48] }
+    ],
+    "prouve": "Au 25 septembre, le runbook a 3 étapes sur 5 prêtes : l'étape 4 « Procédure de retour arrière » (rollback) est TODO et l'étape 5 « Validation fonctionnelle post-déploiement » est À compléter.",
+    "ne_prouve_pas": "Ne montre pas l'état après le 25 septembre. Le ticket OPS-601 (29 sept) confirme toutefois que la version finale n'a pas été reçue.",
+    "statut_preuve": "courante",
+    "statut_note": "Version du 25 sept, corroborée par OPS-601 (29 sept : « Toujours pas reçu la version finale ») et M06 (26 sept)."
+  },
+  "SEC-210.png": {
+    "entete": "NOVA · Environnement de validation",
+    "lignes": [
+      { "t": "Journal d’audit - administrateur" },
+      { "t": "Heure | Utilisateur | Action | Objet | Résultat" },
+      { "t": "14:02:10 | np.admin | LOGIN | Portail | SUCCÈS", "box": [34, 238, 1112, 56] },
+      { "t": "14:03:44 | np.admin | VIEW_RECORD | Dossier 8401 | SUCCÈS", "box": [34, 296, 1112, 56] },
+      { "t": "14:04:08 | np.admin | EXPORT_CSV | --- | ---", "box": [34, 354, 1112, 56] },
+      { "t": "14:05:12 | np.admin | LOGOUT | Portail | SUCCÈS", "box": [34, 412, 1112, 56] },
+      { "t": "Observation QA : Une exportation CSV a été effectuée à 14:04, mais aucun événement détaillé n'est visible.", "box": [35, 505, 1110, 125] }
+    ],
+    "prouve": "Le défaut d'origine : la ligne EXPORT_CSV existe (utilisateur et heure) mais l'objet et le résultat sont vides (« --- »).",
+    "ne_prouve_pas": "Capture jointe à la création du ticket (12 sept), donc antérieure au correctif livré le 19 sept. Elle ne prouve ni que le défaut est encore présent, ni qu'il est corrigé : la validation sécurité est en attente.",
+    "statut_preuve": "historique",
+    "statut_note": "Antérieure au correctif du 19 sept. Statut actuel = EN VALIDATION (SEC-210, 26 sept 15:40)."
+  },
+  "ACC-303.png": {
+    "entete": "NOVA · Build 2026.09.17",
+    "lignes": [
+      { "t": "Fenêtre de modification" },
+      { "t": "Modifier le dossier" },
+      { "t": "Nom du demandeur : Camille Roy", "box": [220, 340, 532, 82] },
+      { "t": "Commentaire : (vide)", "box": [220, 455, 532, 92] },
+      { "t": "Bouton Enregistrer — Le focus clavier ne rejoint pas ce bouton", "box": [784, 494, 270, 96] }
+    ],
+    "prouve": "Sur la build 2026.09.17, le bouton « Enregistrer » de la modale n'est pas atteignable au clavier.",
+    "ne_prouve_pas": "La capture seule ne prouve pas que le défaut est encore ouvert ; c'est le ticket (26 sept 11:03 « Toujours ouvert ») et M06 (10:05) qui l'établissent. Aucune preuve de fermeture dans le corpus.",
+    "statut_preuve": "courante",
+    "statut_note": "Capture du 17 sept ; défaut confirmé ouvert le 26 sept par le ticket et le comité (M06)."
+  },
+  "ACC-301.png": {
+    "entete": "NOVA · Test accessibilité",
+    "lignes": [
+      { "t": "Formulaire de création" },
+      { "t": "Créer une demande" },
+      { "t": "Champ avec placeholder « Votre nom »", "box": [160, 340, 602, 56] },
+      { "t": "Le placeholder disparaît dès la saisie; aucun libellé associé n'est exposé.", "box": [155, 415, 490, 28] }
+    ],
+    "prouve": "Le défaut d'origine d'ACC-301 : champ identifié uniquement par un placeholder, sans libellé associé.",
+    "ne_prouve_pas": "Ne prouve pas que le défaut existe encore : ACC-301 a été corrigé (14 août) et validé avec NVDA et VoiceOver (15 août).",
+    "statut_preuve": "historique",
+    "statut_note": "Ticket fermé le 15 août après validation."
+  },
+  "ACC-302.png": {
+    "entete": "NOVA · Build 2026.08.12",
+    "lignes": [
+      { "t": "Portail NOVA" },
+      { "t": "État de la demande" },
+      { "t": "Badge « EN ATTENTE DE VALIDATION » en gris pâle sur fond gris", "box": [120, 315, 332, 76] },
+      { "t": "Capture reçue avec le ticket : « le bleu/gris est bizarre »", "box": [115, 436, 460, 28] }
+    ],
+    "prouve": "Le défaut d'origine d'ACC-302 : texte de statut à faible contraste (mesuré 2,1:1 par Mélissa le 13 août).",
+    "ne_prouve_pas": "Ne prouve pas que le défaut existe encore : re-test OK à 5,3:1 le 20 août, ticket fermé.",
+    "statut_preuve": "historique",
+    "statut_note": "Ticket fermé le 20 août après re-test."
+  },
+  "DATA-401.png": {
+    "entete": "NOVA · Lot MIG-09-02",
+    "lignes": [
+      { "t": "Résultats de migration" },
+      { "t": "ID | Demandeur | Courriel | Créé | Statut" },
+      { "t": "8401 | Alex Martin | alex.martin@example.org | 15:03:12 | Nouveau", "box": [31, 251, 1109, 41] },
+      { "t": "8402 | Alex Martin | alex.martin@example.org | 15:03:13 | Nouveau", "box": [31, 311, 1109, 41] },
+      { "t": "8403 | Sam Tremblay | sam.t@example.org | 15:04:01 | Nouveau", "box": [31, 372, 1109, 41] }
+    ],
+    "prouve": "Le doublon d'origine : dossiers 8401 et 8402 pour le même demandeur, à une seconde d'intervalle.",
+    "ne_prouve_pas": "Ne prouve pas que les doublons persistent : rejeu de 15 000 événements sans doublon le 9 sept, ticket fermé (confirmé en M04 et M05).",
+    "statut_preuve": "historique",
+    "statut_note": "Ticket DATA-401 fermé le 9 sept ; R-05 « Fermé » au registre."
+  },
+  "INT-101.png": {
+    "entete": "NOVA · Environnement intégration",
+    "lignes": [
+      { "t": "Recherche de dossiers" },
+      { "t": "Aucun résultat", "box": [380, 385, 300, 50] },
+      { "t": "Le ticket original contient seulement : « ça marche pas »", "box": [320, 440, 475, 30] }
+    ],
+    "prouve": "Le symptôme d'origine (5 sept) : la recherche de dossiers en intégration ne retourne rien.",
+    "ne_prouve_pas": "Ne prouve pas que le connecteur est encore en panne : INT-101 a été fermé le 17 sept à 16:10 après 120/120 recherches valides.",
+    "statut_preuve": "historique",
+    "statut_note": "Connecteur validé et ticket fermé le 17 sept."
+  },
+  "PERF-501.png": {
+    "entete": "NOVA · Chrome - réseau entreprise",
+    "lignes": [
+      { "t": "Analyse de performance" },
+      { "t": "DOMContentLoaded — 2.4 s", "box": [80, 236, 1000, 74] },
+      { "t": "Largest Contentful Paint — 7.8 s", "box": [80, 328, 1000, 74] },
+      { "t": "API /dossiers/search — 6.9 s", "box": [80, 420, 1000, 74] },
+      { "t": "Transfert — 1.3 MB", "box": [80, 512, 1000, 74] }
+    ],
+    "prouve": "Une mesure ponctuelle de lenteur (recherche à 6,9 s) au moment du signalement (3 sept).",
+    "ne_prouve_pas": "Ne prouve pas une lenteur actuelle : index ajouté le 6 sept, moyenne 620 ms sur 50 essais le 7 sept, ticket fermé.",
+    "statut_preuve": "historique",
+    "statut_note": "Ticket PERF-501 fermé le 7 sept ; M05 : performance sous la cible de 1 seconde."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "nova-memoire-reprise",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "extract": "tsx scripts/extract-corpus.ts",
+    "verify": "tsx scripts/verify-citations.ts",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "build:single": "tsc -b && vite build --mode single && node -e \"require('fs').mkdirSync('livrable',{recursive:true});require('fs').copyFileSync('dist-single/index.html','livrable/NOVA_memoire_reprise.html')\"",
+    "check": "npm run verify && npm test && npm run build:single && npm run e2e",
+    "brief:pdf": "node scripts/make-brief-pdf.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "minisearch": "^7.2.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4",
+    "zod": "^4.6.5",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/mailparser": "^3.9.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^29.1.1",
+    "mailparser": "^3.9.34",
+    "oxlint": "^1.81.0",
+    "pdfjs-dist": "^6.4.299",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vite-plugin-singlefile": "^2.3.3",
+    "vitest": "^5.0.3",
+    "xlsx": "^0.18.5"
+  }
+}

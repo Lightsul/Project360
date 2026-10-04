@@ -1,0 +1,45 @@
+[
+  {
+    "id": "G1",
+    "titre": "Validation sécurité de SEC-210",
+    "ticket": "SEC-210",
+    "porteur": "Sophie Lambert (sécurité)",
+    "statut": "en validation",
+    "etat": "Correctif livré le 19 sept ; acceptation sécurité non donnée ; re-test planifié le 26 sept (date inconnue).",
+    "manque": ["Re-test du scénario d'export CSV par l'équipe sécurité", "Acceptation sécurité écrite et fermeture du ticket"],
+    "refs": [
+      { "s": "M06", "l": "10:09 (Nicolas Perron)", "q": "validation sécurité de SEC-210" },
+      { "s": "SEC-210", "l": "commentaire 26 sept 15:40 (Sophie)", "q": "Re-test planifié. Statut maintenu EN VALIDATION." },
+      { "s": "M06", "l": "10:02 (Sophie)", "q": "Nous n'avons pas encore donné l'acceptation sécurité de SEC-210." }
+    ]
+  },
+  {
+    "id": "G2",
+    "titre": "Fermeture d'ACC-303",
+    "ticket": "ACC-303",
+    "porteur": "Mélissa Gagnon (accessibilité)",
+    "statut": "ouverte",
+    "etat": "Ticket ouvert : le bouton Enregistrer de la modale est inatteignable au clavier ; correctif annoncé pour la prochaine build (date inconnue).",
+    "manque": ["Correctif du piège de focus de la modale (Boréal)", "Re-test clavier par Mélissa (Chrome, Edge) puis fermeture"],
+    "refs": [
+      { "s": "M06", "l": "10:09 (Nicolas Perron)", "q": "fermeture de ACC-303" },
+      { "s": "ACC-303", "l": "commentaire 26 sept 11:03 (Mélissa)", "q": "Toujours ouvert. Correctif annoncé pour la prochaine build." },
+      { "s": "M06", "l": "10:12 (Julien)", "q": "On vise le correctif ACC-303 dans la prochaine build." }
+    ]
+  },
+  {
+    "id": "G3",
+    "titre": "Runbook approuvé, rollback inclus",
+    "ticket": "OPS-601",
+    "porteur": "Olivier Côté (exploitation)",
+    "statut": "ouverte",
+    "etat": "Runbook du 25 sept : étape 4 (retour arrière) TODO, étape 5 (validation post-déploiement) À compléter ; version finale non reçue au 29 sept.",
+    "manque": ["Étape 4 : procédure de retour arrière (rollback) exécutable", "Étape 5 : validation fonctionnelle post-déploiement", "Approbation d'Olivier Côté (go exploitation)"],
+    "refs": [
+      { "s": "M06", "l": "10:09 (Nicolas Perron)", "q": "approbation du runbook incluant rollback" },
+      { "s": "OPS-601.png", "l": "capture, ligne 4", "q": "4. Procédure de retour arrière — TODO" },
+      { "s": "OPS-601.png", "l": "capture, ligne 5", "q": "5. Validation fonctionnelle post-déploiement — À compléter" },
+      { "s": "OPS-601", "l": "commentaire 29 sept (Olivier)", "q": "Toujours pas reçu la version finale." }
+    ]
+  }
+]

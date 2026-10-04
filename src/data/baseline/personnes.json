@@ -1,0 +1,12 @@
+[
+  { "nom": "Nicolas Perron", "role": "Chargé de projet depuis le 16 sept ; préside le comité de direction", "refs": [{ "s": "E06", "l": "corps, § 2", "q": "Nicolas Perron prend officiellement la charge du projet NOVA" }] },
+  { "nom": "Élodie Caron", "role": "Chargée de projet du 7 juillet au 16 sept ; disponible pour la transition", "refs": [{ "s": "M01", "l": "Décisions", "q": "Élodie Caron agit comme chargée de projet." }] },
+  { "nom": "Sophie Lambert", "role": "Sécurité — valide SEC-210 (condition G1)", "refs": [{ "s": "M02", "l": "Participants", "q": "Sophie Lambert (sécurité)" }] },
+  { "nom": "Mélissa Gagnon", "role": "Accessibilité / QA — valide ACC-303 (condition G2)", "note": "Rôle déduit de ses interventions (tickets ACC, M04 15:10).", "refs": [{ "s": "M04", "l": "15:10 (Mélissa)", "q": "Même chose pour l'accessibilité." }] },
+  { "nom": "Olivier Côté", "role": "Exploitation — approuve le runbook (condition G3)", "refs": [{ "s": "M04", "l": "15:12 (Olivier)", "q": "Pour l'exploitation, une semaine de plus est utile" }] },
+  { "nom": "Marc Gervais", "role": "Architecture — connecteur interne, propriétaire de R-01", "refs": [{ "s": "M02", "l": "Participants", "q": "Marc Gervais (architecture)" }] },
+  { "nom": "Camille Beaulieu", "role": "Migration de données (DATA-401, R-05)", "refs": [{ "s": "RISQUES", "l": "Risques!E6", "q": "Camille Beaulieu" }] },
+  { "nom": "Julien Moreau", "role": "Boréal Numérique — représentant du fournisseur", "refs": [{ "s": "M02", "l": "Participants", "q": "Julien Moreau (Boréal)" }] },
+  { "nom": "Amélie Fortin", "role": "Finances — valide les factures (INV-003)", "refs": [{ "s": "E07", "l": "signature", "q": "Finances" }] },
+  { "nom": "Alex Deschamps", "role": "Communication de statut (brouillon E11)", "note": "Probablement l'« Alex » de Teams du 15 sept (non confirmé).", "refs": [{ "s": "E11", "l": "corps, § 2", "q": "Je prépare le petit message de statut." }] }
+]

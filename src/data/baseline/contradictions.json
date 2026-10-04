@@ -1,0 +1,198 @@
+[
+  {
+    "id": "C1",
+    "sujet": "Date de mise en production : 15 ou 22 octobre?",
+    "oppose": [
+      { "texte": "Le plan v3, daté du 12 sept donc postérieur à la décision, indique encore le 15 oct pour P-06.", "refs": [{ "s": "PLAN-V3", "l": "Plan projet!F7, G7", "q": "Cible de planification" }, { "s": "PLAN-V3", "l": "Plan projet!F7", "q": "2026-10-15" }] },
+      { "texte": "Charte v1, plan v2, plan préliminaire de juin : 15 oct.", "refs": [{ "s": "CHARTE", "l": "en-tête", "q": "Date cible de mise en production : 15 octobre 2026" }, { "s": "PLAN-V2", "l": "Plan projet!F7", "q": "2026-10-15" }] },
+      { "texte": "Notes personnelles (auteur inconnu) : « 15 oct encore date? probablement ».", "refs": [{ "s": "NOTES-PERSO", "l": "puce 2", "q": "vérifier si 15 oct encore date? probablement" }] }
+    ],
+    "tranche": {
+      "texte": "C'est le 22 octobre : le comité de direction l'a approuvé le 10 sept, puis confirmé le 26 sept en le rendant conditionnel. Le 15 sept, le chargé de projet constate que le plan n'a pas été corrigé.",
+      "refs": [
+        { "s": "M04", "l": "15:25 (Élodie)", "q": "Le 22 devient la date officielle." },
+        { "s": "TEAMS-15", "l": "09:18 (Nicolas)", "q": "Le plan projet n'a visiblement pas encore été corrigé." }
+      ]
+    },
+    "critere": "autorité et date",
+    "pourquoi": "Une décision de gouvernance l'emporte sur un document de planification. La date récente du plan v3 ne prouve rien, car le plan n'a pas été mis à jour. La charte le reconnaît elle-même, et les notes personnelles n'ont aucune autorité."
+  },
+  {
+    "id": "C2",
+    "sujet": "Registre des risques : R-01 (connecteur) encore « Ouvert »",
+    "oppose": [
+      { "texte": "Le registre daté du 29 sept indique R-01 « Retard du connecteur interne » au statut « Ouvert ».", "refs": [{ "s": "RISQUES", "l": "Risques!B2, F2", "q": "Retard du connecteur interne" }] }
+    ],
+    "tranche": {
+      "texte": "INT-101 est fermé depuis le 17 sept à 16:10 (120/120 recherches), ce que confirment E12 et le suivi du 18 sept. Le commentaire de la ligne R-01 montre qu'elle n'a pas été revue depuis le 9 sept.",
+      "refs": [
+        { "s": "RISQUES", "l": "Risques!H2", "q": "Suivi au 9 septembre 2026" },
+        { "s": "INT-101", "l": "commentaire 17 sept 16:10 (Marc)", "q": "Validé côté intégration. Je ferme." },
+        { "s": "M05", "l": "Faits saillants, puce 1", "q": "INT-101 : le connecteur interne a été validé et fermé le 17 septembre." }
+      ]
+    },
+    "critere": "date",
+    "pourquoi": "Le fichier date du 29 sept, mais la ligne R-01 reflète la situation au 9 sept. Le fait le plus récent (fermeture validée du 17 sept) l'emporte. Les autres lignes (R-02 à R-05) concordent avec les tickets."
+  },
+  {
+    "id": "C3",
+    "sujet": "Rapport de statut du 21 sept : sécurité et accessibilité « VERT »",
+    "oppose": [
+      { "texte": "Le rapport du 21 sept classe la sécurité VERT (« Correctif SEC-210 livré ») et l'accessibilité VERT.", "refs": [{ "s": "RAPPORT-21", "l": "p. 1, Synthèse", "q": "Sécurité VERT Correctif SEC-210 livré" }, { "s": "RAPPORT-21", "l": "p. 1, Synthèse", "q": "Accessibilité VERT Correctifs appliqués" }] }
+    ],
+    "tranche": {
+      "texte": "SEC-210 est en validation (livré n'est pas accepté) et ACC-303 est ouvert. Le comité du 26 sept en fait deux conditions de go-live. Le rapport reconnaît lui-même avoir été préparé avant la vérification des tickets.",
+      "refs": [
+        { "s": "RAPPORT-21", "l": "p. 1, Commentaire de gestion", "q": "Le rapport a été préparé avant la dernière vérification détaillée de certains tickets." },
+        { "s": "M06", "l": "10:02 (Sophie)", "q": "Nous n'avons pas encore donné l'acceptation sécurité de SEC-210." },
+        { "s": "ACC-303", "l": "en-tête, Statut", "q": "Statut : OUVERT" }
+      ]
+    },
+    "critere": "autorité et date",
+    "pourquoi": "Les validateurs (Sophie pour la sécurité, Mélissa pour l'accessibilité) et le comité du 26 sept, plus récent, l'emportent sur un rapport de synthèse non vérifié."
+  },
+  {
+    "id": "C4",
+    "sujet": "Brouillon de communication « NOVA est au vert »",
+    "oppose": [
+      { "texte": "Le brouillon d'Alex Deschamps (21 sept) affirme que la sécurité et l'accessibilité sont complétées. Il se fonde sur le rapport du 21 sept, joint au courriel, qui est le même fichier que RAPPORT-21 : ce n'est pas une confirmation indépendante.", "refs": [{ "s": "E11", "l": "corps, citation du brouillon", "q": "NOVA est au vert." }, { "s": "E11", "l": "corps, § 3", "q": "Je me base surtout sur le rapport de statut que j'ai reçu." }] }
+    ],
+    "tranche": {
+      "texte": "Le chargé de projet demande de ne pas présenter le 22 comme un go garanti (27 sept), et les conditions G1 et G2 sont ouvertes.",
+      "refs": [{ "s": "E09", "l": "corps, § 4", "q": "Merci de ne pas communiquer le 22 comme un go garanti tant que ces validations ne sont pas terminées." }]
+    },
+    "critere": "autorité et date",
+    "pourquoi": "Un brouillon n'a pas d'autorité, et la pièce jointe duplique une source déjà contredite (C3)."
+  },
+  {
+    "id": "C5",
+    "sujet": "SEC-210 : « réglé » pour Boréal, non accepté par la sécurité",
+    "oppose": [
+      { "texte": "Boréal considère le correctif comme réglé (19 sept) et le présente comme livré au comité.", "refs": [{ "s": "SEC-210", "l": "commentaire 19 sept 10:22 (Boréal)", "q": "Pour nous c'est réglé." }, { "s": "E08", "l": "corps, § 2", "q": "pour nous, le problème est corrigé" }] }
+    ],
+    "tranche": {
+      "texte": "L'acceptation relève de la sécurité (Sophie Lambert). Elle maintient le ticket EN VALIDATION jusqu'à son propre re-test.",
+      "refs": [
+        { "s": "TEAMS-19", "l": "10:31 (Sophie)", "q": "On garde le ticket en validation jusqu'à notre re-test." },
+        { "s": "SEC-210", "l": "commentaire 26 sept 15:40 (Sophie)", "q": "Statut maintenu EN VALIDATION." }
+      ]
+    },
+    "critere": "autorité",
+    "pourquoi": "La déclaration du fournisseur est une livraison. Seule l'équipe sécurité peut prononcer la validation."
+  },
+  {
+    "id": "C6",
+    "sujet": "Accessibilité : « Tout devrait maintenant être conforme »",
+    "oppose": [
+      { "texte": "Le 20 août, Boréal annonce que tout devrait être conforme.", "refs": [{ "s": "E04", "l": "corps, § 2", "q": "Tout devrait maintenant être conforme de notre côté." }] }
+    ],
+    "tranche": {
+      "texte": "Seuls ACC-301 et ACC-302 ont été validés (15 et 20 août). Dès le 12 août, Mélissa voulait repasser les modales au clavier ; ACC-303, ouvert le 17 sept, l'est toujours le 26 sept.",
+      "refs": [
+        { "s": "M03", "l": "Points discutés", "q": "Elle veut toutefois faire un deuxième passage clavier sur les modales." },
+        { "s": "ACC-303", "l": "commentaire 26 sept 11:03 (Mélissa)", "q": "Toujours ouvert." }
+      ]
+    },
+    "critere": "autorité et date",
+    "pourquoi": "Une annonce du fournisseur n'est pas une validation, et les tests postérieurs de la QA ont révélé un défaut bloquant."
+  },
+  {
+    "id": "C7",
+    "sujet": "Portée mobile : incluse ou non?",
+    "oppose": [
+      { "texte": "Le 22 sept, Boréal croyait l'optimisation mobile avancée incluse dans la portée initiale.", "refs": [{ "s": "TEAMS-22", "l": "13:03 (Julien)", "q": "Je pensais que le mobile était inclus dans le scope initial, au moins l'optimisation avancée." }] }
+    ],
+    "tranche": {
+      "texte": "La portée du contrat et de la phase 1 ne contient pas le mobile avancé. Le comité du 10 sept n'a pris aucune décision de dépense, et la décision du 24 sept reporte CR-04 en phase 2.",
+      "refs": [
+        { "s": "M01", "l": "Note", "q": "L'expérience mobile avancée n'a pas été discutée comme livrable distinct pendant cette rencontre." },
+        { "s": "TEAMS-22", "l": "13:06 (Nicolas)", "q": "La compatibilité de base oui. Le package d'optimisation CR-04 à 18k non." },
+        { "s": "DECISION-PORTEE", "l": "§ 2", "q": "ne font pas partie de la portée approuvée de la phase 1" }
+      ]
+    },
+    "critere": "autorité",
+    "pourquoi": "Le contrat et les décisions de gouvernance l'emportent sur la compréhension du fournisseur."
+  },
+  {
+    "id": "C8",
+    "sujet": "INV-003 facture CR-04 alors que CR-04 n'est pas approuvé",
+    "oppose": [
+      { "texte": "INV-003 (22 sept) contient une ligne CR-04 de 18 000 $.", "refs": [{ "s": "INV-003", "l": "p. 1, Note", "q": "La référence CR-04 apparaît sur la ligne mobile." }] }
+    ],
+    "tranche": {
+      "texte": "CR-04 est un brouillon sans approbation. Le contrat interdit de facturer un travail hors portée non approuvé, et le chargé de projet refuse toute facturation de CR-04.",
+      "refs": [
+        { "s": "CR-04", "l": "p. 1, Estimation", "q": "BROUILLON - APPROBATION REQUISE" },
+        { "s": "CONTRAT", "l": "p. 1, Gestion des changements", "q": "approuvée avant exécution et facturation" },
+        { "s": "M06", "l": "10:25 (Nicolas)", "q": "Facturer du CR-04, non. Il n'est pas approuvé." }
+      ]
+    },
+    "critere": "autorité",
+    "pourquoi": "Une facture du fournisseur ne crée pas d'autorisation. Seule une demande de changement approuvée le pourrait."
+  },
+  {
+    "id": "C9",
+    "sujet": "Responsable : Élodie Caron ou Nicolas Perron?",
+    "oppose": [
+      { "texte": "La charte v1, E01 et le plan v2 nomment Élodie Caron.", "refs": [{ "s": "CHARTE", "l": "en-tête", "q": "Chargée de projet : Élodie Caron" }, { "s": "PLAN-V2", "l": "Plan projet!D7", "q": "Élodie Caron" }] }
+    ],
+    "tranche": {
+      "texte": "Depuis le 16 sept, c'est Nicolas Perron : annoncé par Élodie (E06, note de transition et Teams, trois documents du même auteur) et accepté par Nicolas dans Teams (08:47). Le plan v3, daté du 12 sept, le nomme déjà pour P-06, avant la transition : anomalie du plan, pas une preuve.",
+      "refs": [
+        { "s": "E06", "l": "corps, § 2", "q": "Nicolas Perron prend officiellement la charge du projet NOVA à compter d'aujourd'hui, 16 septembre." },
+        { "s": "TEAMS-16", "l": "08:47 (Nicolas)", "q": "Merci Élodie. Je reprends aussi le comité du vendredi." }
+      ]
+    },
+    "critere": "date",
+    "pourquoi": "La charte est un document de départ, non mis à jour. La transition du 16 sept, annoncée par la chargée de projet sortante et acceptée par Nicolas, est postérieure."
+  },
+  {
+    "id": "C10",
+    "sujet": "Région d'hébergement : East US ou Canada Central?",
+    "oppose": [
+      { "texte": "L'architecture v1 (18 juillet) place les données dans East US.", "refs": [{ "s": "ARCHI-V1", "l": "p. 1, schéma", "q": "East US" }] }
+    ],
+    "tranche": {
+      "texte": "ADR-007 (acceptée le 23 juillet) impose Canada Central. La v2 (25 août) l'applique et la migration est vérifiée le 27 août.",
+      "refs": [
+        { "s": "ADR-007", "l": "§ Décision", "q": "L'architecture v1 doit être considérée comme remplacée sur ce point." },
+        { "s": "ARCHI-V2", "l": "p. 1, schéma", "q": "Canada Central" }
+      ]
+    },
+    "critere": "autorité et date",
+    "pourquoi": "Un ADR accepté, plus récent, remplace explicitement la v1."
+  },
+  {
+    "id": "C11",
+    "sujet": "Budget « VERT, sous le plafond » malgré une ligne non autorisée",
+    "oppose": [
+      { "texte": "Le rapport du 21 sept classe le budget VERT, « Sous le plafond contractuel ».", "refs": [{ "s": "RAPPORT-21", "l": "p. 1, Synthèse", "q": "Budget VERT Sous le plafond contractuel" }] }
+    ],
+    "tranche": {
+      "texte": "En montant, le facturé (186 000 $) est bien sous l'autorisé (204 000 $). Mais INV-003 (22 sept, après le rapport) inclut 18 000 $ non autorisés : le statut « VERT » masque un problème de conformité, pas de dépassement.",
+      "refs": [
+        { "s": "INV-003", "l": "p. 1, Facturation", "q": "Optimisation interface mobile - CR-04 18 000 $" },
+        { "s": "E07", "l": "corps, § 3", "q": "Peux-tu me transmettre l'approbation correspondante?" }
+      ]
+    },
+    "critere": "date",
+    "pourquoi": "Le rapport précède INV-003. Il faut distinguer le plafond (montant) de l'autorisation (conformité de chaque ligne)."
+  },
+  {
+    "id": "C12",
+    "sujet": "Captures historiques de défauts fermés (DATA-401, INT-101, PERF-501)",
+    "oppose": [
+      { "texte": "Les captures montrent des doublons (8401/8402), « Aucun résultat » et une recherche à 6,9 s.", "refs": [{ "s": "DATA-401.png", "l": "capture, lignes 8401–8402", "q": "8402 | Alex Martin | alex.martin@example.org | 15:03:13 | Nouveau" }, { "s": "PERF-501.png", "l": "capture, ligne API", "q": "API /dossiers/search — 6.9 s" }] }
+    ],
+    "tranche": {
+      "texte": "Les trois tickets sont fermés après validation : DATA-401 le 9 sept (15 000 événements, aucun doublon), PERF-501 le 7 sept (620 ms), INT-101 le 17 sept (120/120).",
+      "refs": [
+        { "s": "DATA-401", "l": "§ Validation", "q": "9 septembre - lot de 15 000 événements rejoué, aucun doublon détecté. Ticket fermé." },
+        { "s": "PERF-501", "l": "commentaire 07 sept 09:12 (Support)", "q": "moyenne observée 620 ms sur 50 essais" },
+        { "s": "M05", "l": "Faits saillants, puce 2", "q": "aucun doublon dans le dernier rejeu" }
+      ]
+    },
+    "critere": "date",
+    "pourquoi": "Une capture historique ne prouve pas qu'un défaut est encore ouvert. C'est le statut validé du ticket qui fait foi."
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "B-resp",
+    "theme": "Responsable",
+    "titre": "Nicolas Perron, chargé de projet depuis le 16 sept 2026",
+    "texte": "Il succède à Élodie Caron (en poste depuis le 7 juillet). Fournisseur : Boréal Numérique (contact Julien Moreau).",
+    "refs": [
+      { "s": "E06", "l": "corps, § 2", "q": "Nicolas Perron prend officiellement la charge du projet NOVA à compter d'aujourd'hui, 16 septembre." },
+      { "s": "TEAMS-16", "l": "08:45 (Élodie)", "q": "Nicolas reprend officiellement NOVA." }
+    ]
+  },
+  {
+    "id": "B-date",
+    "theme": "Date et conditions",
+    "titre": "Go-live le 22 oct 2026, conditionnel",
+    "texte": "Date approuvée par le comité de direction le 10 sept (proposée par Boréal le 8 sept). Le comité du 26 sept l'a rendue conditionnelle à : G1, SEC-210 validé par la sécurité ; G2, ACC-303 fermé ; G3, runbook approuvé avec rollback. Aucune condition n'est remplie au 30 sept.",
+    "refs": [
+      { "s": "M04", "l": "15:25 (Élodie)", "q": "Le 22 devient la date officielle." },
+      { "s": "M06", "l": "10:09 (Nicolas)", "q": "Donc trois conditions concrètes : validation sécurité de SEC-210, fermeture de ACC-303 et approbation du runbook incluant rollback." }
+    ]
+  },
+  {
+    "id": "B-portee",
+    "theme": "Portée",
+    "titre": "Phase 1 : portail centralisé de demandes",
+    "texte": "SSO uniquement, création et suivi de demandes, pièces jointes, workflow, tableau de suivi, rapports standards, plus les rapports avancés (CR-01). Hébergement Canada Central. Le mobile avancé (CR-04) est hors phase 1 et reporté en phase 2 ; la compatibilité mobile de base reste attendue.",
+    "refs": [
+      { "s": "CONTRAT", "l": "p. 1, Portée incluse", "q": "SSO, création et suivi de demandes, pièces jointes, workflow de traitement, tableau de suivi et rapports standards." },
+      { "s": "DECISION-PORTEE", "l": "§ 2", "q": "La phase 1 doit demeurer utilisable sur mobile" },
+      { "s": "ADR-007", "l": "§ Décision", "q": "L'environnement de production de NOVA sera déployé dans **Canada Central**." }
+    ]
+  },
+  {
+    "id": "B-budget",
+    "theme": "Budget",
+    "titre": "Autorisé 204 000 $ · facturé 186 000 $ · payé 132 000 $",
+    "texte": "Montant autorisé = contrat de 180 000 $ + CR-01 de 24 000 $ (approuvé le 14 août). CR-04 (18 000 $) n'est pas autorisé. Montants en CAD, hors taxes. INV-778 (ORION) est exclu.",
+    "refs": [
+      { "s": "CONTRAT", "l": "p. 1", "q": "Montant maximal initial 180 000 $" },
+      { "s": "CR-01", "l": "p. 1", "q": "Montant 24 000 $" },
+      { "s": "CR-04", "l": "p. 1", "q": "BROUILLON - APPROBATION REQUISE" }
+    ]
+  },
+  {
+    "id": "B-factures",
+    "theme": "Factures",
+    "titre": "INV-003 bloquée : ligne CR-04 de 18 000 $ non approuvée",
+    "texte": "INV-001 (60 000 $) et INV-002 (72 000 $) sont payées. INV-003 (54 000 $) est en validation : refuser la ligne CR-04 de 18 000 $ et demander une facture corrigée ou une note de crédit ; la ligne jalon 3 (36 000 $) reste à confirmer.",
+    "refs": [
+      { "s": "INV-003", "l": "p. 1, Facturation", "q": "Optimisation interface mobile - CR-04 18 000 $" },
+      { "s": "E07", "l": "corps, § 3", "q": "Je trouve un brouillon de CR-04, mais rien qui indique qu'il a été approuvé." }
+    ]
+  },
+  {
+    "id": "B-prio",
+    "theme": "Priorités",
+    "titre": "1) Runbook et rollback · 2) re-test SEC-210 · 3) correctif ACC-303 · 4) INV-003 · 5) date de go/no-go",
+    "texte": "Le runbook est le plus en retard : version finale non reçue au 29 sept, sans responsable de date. Il faut ensuite obtenir une date pour le re-test SEC-210, la date de la prochaine build (ACC-303) et le traitement d'INV-003 avec les Finances, puis corriger le plan (encore au 15 oct) et le registre des risques (R-01 périmé).",
+    "refs": [
+      { "s": "OPS-601", "l": "commentaire 29 sept (Olivier)", "q": "Toujours pas reçu la version finale." },
+      { "s": "SEC-210", "l": "commentaire 26 sept 15:40", "q": "Re-test planifié." },
+      { "s": "ACC-303", "l": "commentaire 26 sept 11:03", "q": "Correctif annoncé pour la prochaine build." }
+    ]
+  }
+]

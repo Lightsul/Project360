@@ -1,0 +1,218 @@
+[
+  {
+    "id": "A1",
+    "cond": "G1",
+    "titre": "Exécuter le re-test sécurité de SEC-210 (scénario export CSV : objet et résultat journalisés)",
+    "resp": "Sophie Lambert",
+    "resp_t": "confirmé",
+    "nature": "engagement",
+    "echeance": "à confirmer",
+    "echeance_note": "Re-test « planifié » le 26 sept, sans date. Doit précéder le go-live du 22 oct.",
+    "statut": "Planifié",
+    "refs": [
+      { "s": "SEC-210", "l": "commentaire 19 sept 14:05 (Sophie)", "q": "Nous devons refaire notre scénario et confirmer nous-mêmes." },
+      { "s": "SEC-210", "l": "commentaire 26 sept 15:40 (Sophie)", "q": "Re-test planifié." },
+      { "s": "RISQUES", "l": "Risques!E3, G3", "q": "Re-test de SEC-210 avant go-live" }
+    ]
+  },
+  {
+    "id": "A2",
+    "cond": "G1",
+    "titre": "Émettre l'acceptation sécurité écrite (go sécurité) et fermer SEC-210",
+    "resp": "Sophie Lambert",
+    "resp_t": "confirmé",
+    "nature": "engagement",
+    "echeance": "à confirmer",
+    "echeance_note": "Dépend du résultat du re-test (A1).",
+    "statut": "Non commencé",
+    "refs": [
+      { "s": "NOTE-TRANSITION", "l": "À surveiller, puce 4", "q": "obtenir le go sécurité et exploitation avant production." },
+      { "s": "SEC-210", "l": "commentaire 19 sept 14:05 (Sophie)", "q": "Ne pas fermer avant validation sécurité." }
+    ]
+  },
+  {
+    "id": "A3",
+    "cond": "G2",
+    "titre": "Livrer le correctif du focus de la modale (ACC-303) dans la prochaine build",
+    "resp": "Boréal Numérique (Julien Moreau)",
+    "resp_t": "confirmé",
+    "nature": "engagement",
+    "echeance": "à confirmer",
+    "echeance_note": "« prochaine build » : date de build non documentée.",
+    "statut": "Annoncé",
+    "refs": [
+      { "s": "M06", "l": "10:12 (Julien)", "q": "On vise le correctif ACC-303 dans la prochaine build." },
+      { "s": "ACC-303", "l": "commentaire 18 sept 09:50 (Boréal)", "q": "Le composant modal intercepte le focus avec une liste d'éléments focusables incomplète." }
+    ]
+  },
+  {
+    "id": "A4",
+    "cond": "G2",
+    "titre": "Re-tester ACC-303 au clavier (Chrome et Edge) puis fermer le ticket",
+    "resp": "Mélissa Gagnon",
+    "resp_t": "confirmé",
+    "nature": "engagement",
+    "echeance": "à confirmer",
+    "echeance_note": "Après la livraison de A3.",
+    "statut": "En attente du correctif",
+    "refs": [
+      { "s": "RISQUES", "l": "Risques!E5, G5", "q": "Fermer ACC-303" },
+      { "s": "ACC-303", "l": "commentaire 17 sept 13:14 (Mélissa)", "q": "Reproduit sur Chrome et Edge." }
+    ]
+  },
+  {
+    "id": "A5",
+    "cond": "G3",
+    "titre": "Compléter le runbook : étape 4 (retour arrière exécutable) et étape 5 (validation fonctionnelle post-déploiement)",
+    "resp": "Boréal Numérique (équipe ops, relancée par Julien Moreau)",
+    "resp_t": "confirmé",
+    "nature": "engagement",
+    "echeance": "à confirmer",
+    "echeance_note": "Version finale non reçue au 29 sept. Le 10 sept, Olivier demandait le runbook final « au moins quelques jours avant » la mise en production.",
+    "statut": "En retard / non reçu",
+    "refs": [
+      { "s": "M06", "l": "10:12 (Julien)", "q": "Pour le runbook je relance notre équipe ops." },
+      { "s": "OPS-601.png", "l": "capture, ligne 4", "q": "4. Procédure de retour arrière — TODO" },
+      { "s": "OPS-601.png", "l": "capture, ligne 5", "q": "5. Validation fonctionnelle post-déploiement — À compléter" },
+      { "s": "M04", "l": "15:12 (Olivier)", "q": "je veux un runbook final au moins quelques jours avant" }
+    ]
+  },
+  {
+    "id": "A6",
+    "cond": "G3",
+    "titre": "Approuver le runbook final (go exploitation)",
+    "resp": "Olivier Côté",
+    "resp_t": "confirmé",
+    "nature": "engagement",
+    "echeance": "à confirmer",
+    "echeance_note": "Le plan v3 prévoit la fin de la préparation exploitation (P-05) au 2026-10-10, mais ce plan n'est pas fiable (date de production non corrigée).",
+    "statut": "En attente de A5",
+    "refs": [
+      { "s": "M06", "l": "10:07 (Olivier)", "q": "Je ne donnerai pas mon go exploitation tant que je n'ai pas une procédure exécutable." },
+      { "s": "OPS-601", "l": "commentaire 25 sept (Olivier)", "q": "J'ai besoin de quelque chose qu'une autre personne peut exécuter sans appeler l'équipe projet." },
+      { "s": "PLAN-V3", "l": "Plan projet!F6", "q": "2026-10-10" }
+    ]
+  },
+  {
+    "id": "A7",
+    "cond": null,
+    "titre": "Fixer et publier une date de go/no-go, et les échéances de A1, A3 et A5",
+    "resp": "Nicolas Perron",
+    "resp_t": "proposé",
+    "nature": "recommandation",
+    "echeance": "à confirmer",
+    "echeance_note": "Recommandation : avant la mi-octobre, pour respecter la demande d'Olivier (runbook « quelques jours avant »).",
+    "statut": "À lancer",
+    "refs": [
+      { "s": "M06", "l": "10:15 (Nicolas)", "q": "Le 22 reste notre cible, mais je veux que ce soit écrit noir sur blanc : c'est conditionnel à ces trois éléments." },
+      { "s": "E09", "l": "corps, § 4", "q": "Merci de ne pas communiquer le 22 comme un go garanti tant que ces validations ne sont pas terminées." }
+    ]
+  },
+  {
+    "id": "A8",
+    "cond": null,
+    "titre": "INV-003 : refuser la ligne CR-04 (18 000 $), demander une facture corrigée ou une note de crédit, et traiter formellement la question des Finances",
+    "resp": "Nicolas Perron (avec Amélie Fortin, Finances)",
+    "resp_t": "proposé",
+    "nature": "recommandation",
+    "echeance": "à confirmer",
+    "echeance_note": "Les Finances attendent depuis le 23 sept. E10 (24 sept) leur est adressé mais ne traite pas formellement la facture.",
+    "statut": "À lancer",
+    "refs": [
+      { "s": "E07", "l": "corps, § 3", "q": "Peux-tu me transmettre l'approbation correspondante?" },
+      { "s": "E10", "l": "corps, § 3", "q": "Aucune dépense liée à CR-04 ne doit être engagée ou facturée sans nouvelle approbation." },
+      { "s": "CONTRAT", "l": "p. 1, Gestion des changements", "q": "approuvée avant exécution et facturation" }
+    ]
+  },
+  {
+    "id": "A9",
+    "cond": null,
+    "titre": "Faire confirmer l'acceptation du jalon 3 (36 000 $) avant de libérer cette ligne d'INV-003",
+    "resp": "Nicolas Perron",
+    "resp_t": "proposé",
+    "nature": "recommandation",
+    "echeance": "à confirmer",
+    "echeance_note": "Les critères du jalon 3 ne figurent pas dans le corpus.",
+    "statut": "À lancer",
+    "refs": [
+      { "s": "INV-003", "l": "p. 1, Facturation", "q": "Développement phase 1 - jalon 3 36 000 $" }
+    ]
+  },
+  {
+    "id": "A10",
+    "cond": null,
+    "titre": "Corriger le plan projet : P-06 (15 oct → 22 oct, conditionnel) et recaler P-04 (tests intégrés, fin 5 oct) et P-05 (préparation exploitation, fin 10 oct)",
+    "resp": "Nicolas Perron",
+    "resp_t": "confirmé",
+    "nature": "engagement",
+    "echeance": "à confirmer",
+    "echeance_note": "Demandé dès le 10 sept ; toujours 2026-10-15 dans le plan v3.",
+    "statut": "Non fait",
+    "refs": [
+      { "s": "M04", "l": "15:25 (Élodie)", "q": "On doit mettre les plans et communications à jour." },
+      { "s": "NOTE-TRANSITION", "l": "À surveiller, puce 1", "q": "faire mettre à jour la date dans tous les plans (le comité a approuvé le 22 octobre);" },
+      { "s": "PLAN-V3", "l": "Plan projet!F7", "q": "2026-10-15" },
+      { "s": "PLAN-V3", "l": "Plan projet!F5", "q": "2026-10-05" },
+      { "s": "PLAN-V3", "l": "Plan projet!F6", "q": "2026-10-10" }
+    ]
+  },
+  {
+    "id": "A11",
+    "cond": null,
+    "titre": "Mettre à jour le registre des risques : R-01 (connecteur) à fermer ou à requalifier (INT-101 fermé le 17 sept)",
+    "resp": "Marc Gervais (propriétaire R-01)",
+    "resp_t": "proposé",
+    "nature": "recommandation",
+    "echeance": "à confirmer",
+    "statut": "À lancer",
+    "refs": [
+      { "s": "RISQUES", "l": "Risques!E2, F2", "q": "Ouvert" },
+      { "s": "RISQUES", "l": "Risques!H2", "q": "Suivi au 9 septembre 2026" },
+      { "s": "INT-101", "l": "commentaire 17 sept 16:10 (Marc)", "q": "Validé côté intégration. Je ferme." }
+    ]
+  },
+  {
+    "id": "A12",
+    "cond": null,
+    "titre": "Corriger la communication de statut : pas de « au vert », ni de « sécurité et accessibilité complétées »",
+    "resp": "Alex Deschamps (communication), validé par Nicolas Perron",
+    "resp_t": "proposé",
+    "nature": "recommandation",
+    "echeance": "à confirmer",
+    "echeance_note": "E09 (27 sept) demande à tous de ne pas présenter le 22 comme un go garanti ; personne ne s'est engagé à corriger le brouillon.",
+    "statut": "À vérifier",
+    "refs": [
+      { "s": "E11", "l": "corps, citation du brouillon", "q": "NOVA est au vert. La sécurité et l'accessibilité sont complétées et le projet vise le 22 octobre." },
+      { "s": "E09", "l": "corps, § 4", "q": "Merci de ne pas communiquer le 22 comme un go garanti tant que ces validations ne sont pas terminées." }
+    ]
+  },
+  {
+    "id": "A13",
+    "cond": null,
+    "titre": "Obtenir de Boréal la confirmation écrite qu'aucun travail CR-04 ne sera facturé en phase 1",
+    "resp": "Nicolas Perron",
+    "resp_t": "proposé",
+    "nature": "recommandation",
+    "echeance": "à confirmer",
+    "echeance_note": "Boréal a « déjà commencé à regarder quelques ajustements » mobiles (26 sept).",
+    "statut": "À lancer",
+    "refs": [
+      { "s": "M06", "l": "10:24 (Julien)", "q": "Pour le mobile, on a déjà commencé à regarder quelques ajustements" },
+      { "s": "DECISION-PORTEE", "l": "§ 2", "q": "Aucune dépense additionnelle liée à CR-04 ne doit être engagée sans nouvelle approbation." }
+    ]
+  },
+  {
+    "id": "A14",
+    "cond": null,
+    "titre": "Archiver la preuve technique de l'hébergement Canada Central (validation exigée par ADR-007 avant les tests de production)",
+    "resp": "Marc Gervais (architecture)",
+    "resp_t": "proposé",
+    "nature": "recommandation",
+    "echeance": "à confirmer",
+    "statut": "À lancer",
+    "refs": [
+      { "s": "ADR-007", "l": "§ Conséquences, puce 3", "q": "Une validation technique doit confirmer la migration avant les tests de production." },
+      { "s": "M03", "l": "Résumé de gestion, puce 1", "q": "vérifiée par l'équipe architecture" }
+    ]
+  }
+]

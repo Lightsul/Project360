@@ -1,0 +1,196 @@
+[
+  {
+    "id": "Q01",
+    "question": "Quelle est la date de mise en production actuellement approuvée, et avec quelle réserve?",
+    "court": "Le 22 octobre 2026, approuvé par le comité de direction le 10 septembre (15:22–15:25). La date est conditionnelle : elle exige la validation sécurité de SEC-210, la fermeture d'ACC-303 et un runbook approuvé avec rollback (comité du 26 septembre).",
+    "detail": [
+      "Décision : au comité de direction du 10 sept, Élodie Caron formule le déplacement du 15 au 22 octobre 2026. Personne ne s'y oppose et elle déclare la date « approuvée » à 15:25.",
+      "Réserve : dès 15:27, Nicolas Perron précise que le 22 n'est pas un go automatique. Le 26 sept, le comité fixe trois conditions concrètes. Le 27 sept, Nicolas le rappelle par courriel (E09) : ne pas communiquer le 22 comme un go garanti.",
+      "Le 15 octobre qui figure encore dans le plan v3 (cellule F7) et dans la charte est périmé."
+    ],
+    "nuance": "Le plan v3 date du 12 septembre, donc d'après la décision, mais il n'a pas été corrigé (Teams du 15 sept). Une date de fichier récente ne prouve rien. Aucune date de go/no-go formelle n'est documentée.",
+    "refs": [
+      { "s": "M04", "l": "15:22 (Élodie Caron)", "q": "La date cible de mise en production NOVA est déplacée du 15 octobre au 22 octobre 2026" },
+      { "s": "M04", "l": "15:25 (Élodie Caron)", "q": "Le 22 devient la date officielle." },
+      { "s": "M04", "l": "15:27 (Nicolas Perron)", "q": "le 22 n'est pas un go automatique" },
+      { "s": "M06", "l": "10:15 (Nicolas Perron)", "q": "c'est conditionnel à ces trois éléments" },
+      { "s": "E09", "l": "corps, § 2–3", "q": "Cette date est toutefois conditionnelle aux validations restantes : sécurité, accessibilité et préparation exploitation." },
+      { "s": "PLAN-V3", "l": "Plan projet!F7", "q": "2026-10-15" }
+    ]
+  },
+  {
+    "id": "Q02",
+    "question": "Pourquoi la date a-t-elle changé, et quel est l'état actuel de la cause initiale?",
+    "court": "La date a changé à cause du connecteur interne (INT-101) : erreurs 401 dues à un jeton de service expiré après un changement de secret, puis erreurs intermittentes. Le connecteur était devenu le chemin critique. INT-101 est aujourd'hui fermé : validé le 17 septembre à 16:10 avec 120 recherches sur 120.",
+    "detail": [
+      "5 sept : Boréal observe des 401 (jeton expiré). Les logs montrent exp=2026-09-04T23:00:00Z et refresh_attempt=false.",
+      "8 sept : erreurs intermittentes ; Marc Gervais signale le risque pour le 15 octobre. Le même jour, Boréal recommande le 22 octobre (E05).",
+      "10 sept : Marc confirme que le connecteur est le chemin critique. Sécurité et accessibilité refusent de compresser leurs tests.",
+      "17 sept : correctif déployé (rotation du secret et correction du renouvellement du jeton), 120/120 recherches valides, ticket fermé par Marc (16:10). Confirmé par E12 et au suivi du 18 sept (M05)."
+    ],
+    "nuance": "Le registre des risques du 29 sept montre encore R-01 « Retard du connecteur interne » à l'état « Ouvert ». Ce suivi date du 9 septembre (cellule H2) : la ligne est périmée. Le courriel archivé du 17 sept est une copie de E12 (même Message-ID) et ne confirme rien de plus. La capture « Aucun résultat » est historique.",
+    "refs": [
+      { "s": "INT-101", "l": "commentaire 05 sept 11:18 (Boréal)", "q": "On voit des 401 sur l'appel vers le service interne. Le jeton de service semble expiré après le changement de secret." },
+      { "s": "INT-101.log", "l": "ligne 2", "q": "auth token exp=2026-09-04T23:00:00Z refresh_attempt=false" },
+      { "s": "M04", "l": "15:06 (Marc Gervais)", "q": "Je confirme que le connecteur est le chemin critique en ce moment." },
+      { "s": "INT-101", "l": "commentaire 17 sept 16:10 (Marc)", "q": "Validé côté intégration. Je ferme." },
+      { "s": "E12", "l": "corps, § 2", "q": "120/120 recherches ont retourné les résultats attendus." },
+      { "s": "RISQUES", "l": "Risques!F2, H2", "q": "Suivi au 9 septembre 2026" }
+    ]
+  },
+  {
+    "id": "Q03",
+    "question": "Qui a approuvé le changement et quand? Distinguez proposition et approbation.",
+    "court": "La proposition vient de Boréal (Julien Moreau), par courriel le 8 septembre (E05), qui la qualifie lui-même de « proposition ». L'approbation vient du comité de direction le 10 septembre (M04, 15:22–15:25) : décision formulée par Élodie Caron, alors chargée de projet, sans objection.",
+    "detail": [
+      "Proposition (8 sept, 11:16) : Boréal recommande le 22 octobre et laisse explicitement la décision à la gouvernance.",
+      "Réitération (10 sept, 15:02) : Julien répète la recommandation en comité.",
+      "Approbation (10 sept, 15:22–15:25) : Sophie, Marc et Olivier disent « Non » (aucune objection), Nicolas dit « D'accord », puis Élodie conclut « Donc approuvé ».",
+      "Confirmation ultérieure : le 15 sept, Nicolas rappelle sur Teams que le comité a approuvé le 22 octobre le 10 septembre."
+    ],
+    "nuance": "La transcription ne mentionne aucun vote formel ni signature : l'approbation est un consentement sans objection, prononcé par la chargée de projet. Le comité du 26 sept l'a ensuite assortie de conditions (Q01).",
+    "refs": [
+      { "s": "E05", "l": "corps, § 2", "q": "Notre recommandation est de déplacer la mise en production au 22 octobre." },
+      { "s": "E05", "l": "corps, § 3", "q": "À ce stade, il s'agit d'une proposition de notre part. À vous de confirmer la décision de gouvernance." },
+      { "s": "M04", "l": "15:22 (Élodie Caron)", "q": "Est-ce que quelqu'un s'oppose?" },
+      { "s": "M04", "l": "15:25 (Élodie Caron)", "q": "Donc approuvé." },
+      { "s": "TEAMS-15", "l": "09:18 (Nicolas)", "q": "le comité a approuvé le 22 octobre le 10 septembre" }
+    ]
+  },
+  {
+    "id": "Q04",
+    "question": "Qui est responsable du projet et depuis quand?",
+    "court": "Nicolas Perron est chargé de projet depuis le 16 septembre 2026, d'après l'annonce d'Élodie (courriel E06, note de transition et message Teams : trois documents du même auteur) et l'accusé de réception de Nicolas dans Teams (08:47). Avant lui, Élodie Caron occupait le rôle depuis le démarrage, le 7 juillet.",
+    "detail": [
+      "7 juil. : Élodie Caron est nommée chargée de projet (CR de démarrage, charte v1, E01).",
+      "16 sept., 08:35 : Élodie annonce que Nicolas prend officiellement la charge du projet « à compter d'aujourd'hui ». Elle reste disponible quelques jours pour le transfert.",
+      "Le plan v3, daté du 12 sept, nomme déjà Nicolas Perron pour la mise en production (cellule D7), avant la transition du 16 sept : c'est une anomalie du plan, pas une preuve."
+    ],
+    "nuance": "La charte v1 et le plan v2 nomment encore Élodie : ces documents ne sont pas mis à jour. L'acte formel de nomination et son décideur ne figurent pas dans le corpus (« Comme convenu »).",
+    "refs": [
+      { "s": "E06", "l": "corps, § 2", "q": "Nicolas Perron prend officiellement la charge du projet NOVA à compter d'aujourd'hui, 16 septembre." },
+      { "s": "NOTE-TRANSITION", "l": "§ 1", "q": "À compter d'aujourd'hui, Nicolas Perron reprend le rôle de chargé de projet NOVA." },
+      { "s": "TEAMS-16", "l": "08:45 (Élodie)", "q": "à partir d'aujourd'hui, Nicolas reprend officiellement NOVA." },
+      { "s": "TEAMS-16", "l": "08:47 (Nicolas)", "q": "Merci Élodie. Je reprends aussi le comité du vendredi." },
+      { "s": "M01", "l": "Décisions, puce 1", "q": "Élodie Caron agit comme chargée de projet." }
+    ]
+  },
+  {
+    "id": "Q05",
+    "question": "Quel est le montant contractuel autorisé et comment se calcule-t-il?",
+    "court": "Le montant autorisé est de 204 000 $ (CAD, hors taxes) : 180 000 $ du contrat initial plus 24 000 $ de CR-01, approuvé le 14 août par le comité de projet. CR-04 (18 000 $) n'est pas autorisé. À distinguer : 186 000 $ facturés et 132 000 $ payés.",
+    "detail": [
+      "Autorisé : 180 000 $ (contrat, « Montant maximal initial ») + 24 000 $ (CR-01 « APPROUVÉE », 14 août) = 204 000 $.",
+      "Non autorisé : CR-04, optimisation mobile, 18 000 $ estimés, au statut « BROUILLON - APPROBATION REQUISE ».",
+      "Facturé : INV-001 60 000 $ + INV-002 72 000 $ + INV-003 54 000 $ = 186 000 $.",
+      "Payé : INV-001 60 000 $ + INV-002 72 000 $ = 132 000 $. INV-003 est en validation.",
+      "Exclu : INV-778 (41 000 $) concerne le projet ORION."
+    ],
+    "nuance": "Le contrat ne mentionne que le montant initial de 180 000 $. Le total de 204 000 $ est notre calcul, qui suppose que CR-01 approuvé augmente le plafond. Aucun avenant contractuel ne le confirme : à confirmer. Le rapport du 21 sept dit « Budget VERT », mais le facturé inclut 18 000 $ non autorisés.",
+    "refs": [
+      { "s": "CONTRAT", "l": "p. 1, tableau Valeur contractuelle", "q": "Montant maximal initial 180 000 $" },
+      { "s": "CR-01", "l": "p. 1, Impact financier", "q": "Montant 24 000 $" },
+      { "s": "CR-01", "l": "p. 1, Impact financier", "q": "Décision APPROUVÉE" },
+      { "s": "CR-04", "l": "p. 1, Estimation", "q": "Statut BROUILLON - APPROBATION REQUISE" },
+      { "s": "INV-002", "l": "p. 1, Facturation", "q": "Rapports avancés - CR-01 24 000 $" },
+      { "s": "M04", "l": "15:40 (Élodie)", "q": "Mobile : aucune décision de dépense." }
+    ]
+  },
+  {
+    "id": "Q06",
+    "question": "Quel problème présente INV-003? Précisez le montant concerné et le traitement à prévoir.",
+    "court": "INV-003 (22 sept, 54 000 $, en validation) facture une ligne « Optimisation interface mobile - CR-04 » de 18 000 $. Or CR-04 n'est qu'un brouillon non approuvé. Traitement recommandé : refuser cette ligne et demander une facture corrigée ou une note de crédit. La ligne du jalon 3 (36 000 $) reste à confirmer avant paiement.",
+    "detail": [
+      "Le contrat exige qu'un travail hors portée soit approuvé par écrit avant son exécution et sa facturation.",
+      "CR-04 : brouillon, sans signature ni numéro d'approbation. Le comité du 10 sept n'a pris aucune décision de dépense. Le 24 sept, CR-04 est reporté en phase 2 (E10). Le 26 sept, Nicolas déclare « Facturer du CR-04, non ».",
+      "Le 23 sept, les Finances (Amélie Fortin) bloquent la libération et demandent l'approbation à Nicolas.",
+      "Traitement (recommandation de l'équipe) : ne pas payer les 18 000 $ ; obtenir de Boréal une facture corrigée ou une note de crédit ; faire confirmer l'acceptation du jalon 3 (36 000 $) avant de libérer cette ligne."
+    ],
+    "nuance": "Les critères d'acceptation du jalon 3 ne figurent pas dans le corpus : la légitimité des 36 000 $ est à confirmer. La réponse de Boréal n'est pas documentée. La facture jointe à E07 est le même fichier que INV-003.pdf : ce n'est pas une seconde preuve.",
+    "refs": [
+      { "s": "INV-003", "l": "p. 1, Facturation", "q": "Optimisation interface mobile - CR-04 18 000 $" },
+      { "s": "INV-003", "l": "p. 1, Facturation", "q": "Développement phase 1 - jalon 3 36 000 $" },
+      { "s": "CR-04", "l": "p. 1, Note", "q": "Aucun numéro d’approbation ni signature de comité n’est présent dans ce document." },
+      { "s": "CONTRAT", "l": "p. 1, Gestion des changements", "q": "Tout travail hors portée doit faire l’objet d’une demande de changement écrite et approuvée avant exécution et facturation." },
+      { "s": "E07", "l": "corps, § 3", "q": "Je trouve un brouillon de CR-04, mais rien qui indique qu'il a été approuvé." },
+      { "s": "M06", "l": "10:25 (Nicolas)", "q": "Facturer du CR-04, non. Il n'est pas approuvé." }
+    ]
+  },
+  {
+    "id": "Q07",
+    "question": "Où les données de production doivent-elles être hébergées? Quelle preuve confirme la mise en œuvre?",
+    "court": "Les données de production doivent être hébergées dans la région Canada Central (ADR-007, décision du 23 juillet en atelier M02). Boréal a déclaré la migration terminée le 26 août (E03, livraison). Le comité du 27 août indique qu'elle a été vérifiée par l'équipe d'architecture (M03).",
+    "detail": [
+      "Décision : le 23 juillet à 09:10, Marc, Sophie et Julien répondent « Oui » à Canada Central. L'ADR-007 est au statut « Acceptée ».",
+      "Livraison déclarée : le 26 août, Boréal annonce la migration complétée et joint le schéma v2, avec un test de déploiement et de connectivité.",
+      "Vérification : M03 (27 août) consigne que la migration est « déclarée terminée par Boréal et vérifiée par l'équipe architecture ».",
+      "L'architecture v1 (East US) est remplacée."
+    ],
+    "nuance": "Le corpus ne contient aucune preuve technique directe (inventaire des ressources, capture du portail infonuagique). La vérification n'est connue que par le résumé du comité. L'ADR exige une validation technique « avant les tests de production » : la trace détaillée est à confirmer auprès de Marc Gervais. Le schéma v2 joint à E03 est le même fichier que Architecture_NOVA_v2.pdf.",
+    "refs": [
+      { "s": "ADR-007", "l": "§ Décision", "q": "L'environnement de production de NOVA sera déployé dans **Canada Central**." },
+      { "s": "M02", "l": "09:06 (Sophie)", "q": "Les données de production NOVA doivent demeurer au Canada." },
+      { "s": "E03", "l": "corps, § 2", "q": "La migration des ressources prévues pour NOVA vers Canada Central est complétée." },
+      { "s": "M03", "l": "Résumé de gestion, puce 1", "q": "La migration de l'architecture vers Canada Central est déclarée terminée par Boréal et vérifiée par l'équipe architecture." },
+      { "s": "ADR-007", "l": "§ Conséquences, puce 3", "q": "Une validation technique doit confirmer la migration avant les tests de production." }
+    ]
+  },
+  {
+    "id": "Q08",
+    "question": "La sécurité est-elle acceptée? Distinguez livraison et validation.",
+    "court": "Non. Le correctif SEC-210 a été livré (déployé en validation) le 19 septembre, mais l'acceptation sécurité n'est pas donnée. Le ticket est toujours « EN VALIDATION ». Le 26 septembre, un re-test a été planifié, sans date connue. C'est la condition de go-live G1.",
+    "detail": [
+      "Défaut : lors d'un export CSV, la ligne EXPORT_CSV n'indique ni l'objet ni le résultat (« --- » sur la capture).",
+      "Livraison (19 sept, 10:20–10:22) : Boréal déploie le correctif ; « pour nous, le problème est corrigé ».",
+      "Validation : Sophie Lambert demande de ne pas fermer le ticket avant le re-test sécurité (19 sept, 14:05). Au comité du 26 sept : « Nous n'avons pas encore donné l'acceptation sécurité ».",
+      "26 sept, 15:40 : re-test planifié, statut maintenu EN VALIDATION."
+    ],
+    "nuance": "Le rapport du 21 sept (« Sécurité VERT ») et le brouillon E11 sont contredits. La capture du journal d'audit est antérieure au correctif : elle ne prouve ni que le défaut persiste, ni qu'il est corrigé. La date du re-test est inconnue.",
+    "refs": [
+      { "s": "SEC-210", "l": "en-tête, Statut", "q": "Statut : EN VALIDATION" },
+      { "s": "E08", "l": "corps, § 2", "q": "Le correctif pour SEC-210 est déployé en validation depuis ce matin." },
+      { "s": "SEC-210", "l": "commentaire 19 sept 14:05 (Sophie)", "q": "Ne pas fermer avant validation sécurité." },
+      { "s": "M06", "l": "10:02 (Sophie)", "q": "Nous n'avons pas encore donné l'acceptation sécurité de SEC-210." },
+      { "s": "SEC-210", "l": "commentaire 26 sept 15:40 (Sophie)", "q": "Re-test planifié. Statut maintenu EN VALIDATION." },
+      { "s": "TEAMS-19", "l": "10:31 (Sophie)", "q": "« déployé » != « accepté »" }
+    ]
+  },
+  {
+    "id": "Q09",
+    "question": "L'accessibilité est-elle complétée? Identifiez ce qui reste à corriger.",
+    "court": "Non. ACC-301 (libellés) et ACC-302 (contraste) sont corrigés et validés depuis les 15 et 20 août. ACC-303 reste ouvert : dans la modale « Modifier le dossier », le focus clavier tourne entre Nom et Commentaire et n'atteint jamais le bouton Enregistrer. Le correctif est annoncé pour la prochaine build, sans date. C'est la condition G2.",
+    "detail": [
+      "ACC-301 : libellé programmatique ajouté le 14 août, validé avec NVDA et VoiceOver le 15 août.",
+      "ACC-302 : contraste passé de 2,1:1 à 5,3:1, re-test OK le 20 août.",
+      "ACC-303 (ouvert le 17 sept, priorité haute) : reproduit sur Chrome et Edge. Cause selon Boréal : la liste des éléments focusables du composant modal est incomplète.",
+      "26 sept : Mélissa juge le défaut bloquant avant production ; le ticket est « Toujours ouvert ». Boréal vise la prochaine build."
+    ],
+    "nuance": "En août, Julien affirmait que « Tout devrait maintenant être conforme » (E04) ; le rapport du 21 sept affiche « Accessibilité VERT ». Les deux sont contredits par ACC-303. La capture date de la build du 17 sept ; c'est le ticket du 26 sept qui établit que le défaut est encore ouvert.",
+    "refs": [
+      { "s": "ACC-303", "l": "en-tête, Statut", "q": "Statut : OUVERT" },
+      { "s": "ACC-303", "l": "commentaire 17 sept 13:14 (Mélissa)", "q": "le bouton Enregistrer n'est jamais atteint avec Tab." },
+      { "s": "ACC-303", "l": "commentaire 26 sept 11:03 (Mélissa)", "q": "Toujours ouvert. Correctif annoncé pour la prochaine build." },
+      { "s": "M06", "l": "10:05 (Mélissa)", "q": "Pour moi c'est un bloquant d'accessibilité avant production." },
+      { "s": "ACC-303.png", "l": "capture, bouton Enregistrer", "q": "Bouton Enregistrer — Le focus clavier ne rejoint pas ce bouton" },
+      { "s": "M05", "l": "Faits saillants, puce 5", "q": "ACC-301 et ACC-302 sont fermés." }
+    ]
+  },
+  {
+    "id": "Q10",
+    "question": "Quelles sont les trois conditions de go-live? Précisez les travaux manquants du runbook à partir de sa capture.",
+    "court": "Les trois conditions (comité du 26 septembre, 10:09) : G1, validation sécurité de SEC-210 ; G2, fermeture d'ACC-303 ; G3, runbook approuvé, procédure de rollback incluse. Dans la capture du runbook (version du 25 septembre), l'étape 4 « Procédure de retour arrière » est TODO et l'étape 5 « Validation fonctionnelle post-déploiement » est « À compléter ». Les étapes 1 à 3 sont OK.",
+    "detail": [
+      "Nicolas énumère les trois conditions ; Sophie, Mélissa et Olivier répondent « Oui ».",
+      "Runbook : 1. Vérifier la santé des services (OK). 2. Activer le mode maintenance (OK). 3. Déployer la version approuvée (OK). 4. Procédure de retour arrière (TODO). 5. Validation fonctionnelle post-déploiement (À compléter).",
+      "Olivier exige une procédure qu'une autre personne peut exécuter sans appeler l'équipe projet. Le 29 sept, il n'a toujours pas reçu la version finale."
+    ],
+    "nuance": "Aucune des trois conditions n'est remplie au 30 sept 09:00. Aucune date de livraison du runbook final ni de go/no-go n'est documentée. Le 10 sept, Olivier demandait le runbook final « au moins quelques jours avant » la mise en production.",
+    "refs": [
+      { "s": "M06", "l": "10:09 (Nicolas Perron)", "q": "Donc trois conditions concrètes : validation sécurité de SEC-210, fermeture de ACC-303 et approbation du runbook incluant rollback." },
+      { "s": "OPS-601.png", "l": "capture, ligne 4", "q": "4. Procédure de retour arrière — TODO" },
+      { "s": "OPS-601.png", "l": "capture, ligne 5", "q": "5. Validation fonctionnelle post-déploiement — À compléter" },
+      { "s": "OPS-601", "l": "commentaire 29 sept (Olivier)", "q": "Toujours pas reçu la version finale." },
+      { "s": "M06", "l": "10:07 (Olivier)", "q": "Le runbook est encore incomplet. Il manque le rollback." }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "autorise": [
+    { "label": "Contrat Boréal — montant maximal initial", "montant": 180000, "refs": [{ "s": "CONTRAT", "l": "p. 1, Valeur contractuelle", "q": "Montant maximal initial 180 000 $" }] },
+    { "label": "CR-01 Rapports avancés — approuvé le 14 août", "montant": 24000, "refs": [{ "s": "CR-01", "l": "p. 1, Impact financier", "q": "Montant 24 000 $" }] }
+  ],
+  "nonAutorise": [
+    { "label": "CR-04 Optimisation mobile — BROUILLON, reporté en phase 2", "montant": 18000, "refs": [{ "s": "CR-04", "l": "p. 1, Estimation", "q": "Montant estimé 18 000 $" }] }
+  ],
+  "factures": [
+    {
+      "id": "INV-001", "date": "2026-07-31", "statut": "Payée",
+      "lignes": [{ "desc": "Développement phase 1 - acompte", "montant": 60000, "approuve": true }],
+      "traitement": "Aucun.",
+      "refs": [{ "s": "INV-001", "l": "p. 1, Détails", "q": "Statut Payée" }]
+    },
+    {
+      "id": "INV-002", "date": "2026-08-31", "statut": "Payée",
+      "lignes": [
+        { "desc": "Développement phase 1 - jalon 2", "montant": 48000, "approuve": true },
+        { "desc": "Rapports avancés - CR-01", "montant": 24000, "approuve": true, "note": "CR-01 approuvé le 14 août" }
+      ],
+      "traitement": "Aucun.",
+      "refs": [{ "s": "INV-002", "l": "p. 1, Facturation", "q": "Développement phase 1 - jalon 2 48 000 $" }]
+    },
+    {
+      "id": "INV-003", "date": "2026-09-22", "statut": "En validation",
+      "lignes": [
+        { "desc": "Développement phase 1 - jalon 3", "montant": 36000, "approuve": true, "note": "Dans le contrat ; acceptation du jalon à confirmer" },
+        { "desc": "Optimisation interface mobile - CR-04", "montant": 18000, "approuve": false, "note": "CR-04 non approuvé (brouillon)" }
+      ],
+      "traitement": "Refuser la ligne CR-04 (18 000 $) et demander une facture corrigée ou une note de crédit. Confirmer l'acceptation du jalon 3 (36 000 $) avant paiement.",
+      "refs": [{ "s": "INV-003", "l": "p. 1, Facturation", "q": "Optimisation interface mobile - CR-04 18 000 $" }, { "s": "E07", "l": "corps, § 3", "q": "Peux-tu me transmettre l'approbation correspondante?" }]
+    }
+  ],
+  "horsProjet": [
+    { "id": "INV-778", "projet": "ORION", "montant": 41000, "refs": [{ "s": "INV-778", "l": "p. 1, Détails", "q": "Projet ORION" }] }
+  ]
+}
